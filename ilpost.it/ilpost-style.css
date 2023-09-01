@@ -1,0 +1,193 @@
+/*** variables ***/
+:root {
+    --background: #F1F6F8;
+    --text: #1E293B;
+    --highlight: ;
+  }
+  
+  /* import Google fonts */
+  @import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100;200,300;400,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&family=Noto+Serif:ital,wght@0,100;0,300;0,500;0,700;0,900;1,100;1,300;1,500;1,700;1,900&display=swap');
+  
+  /* hide distracting elements */
+  #maxticker,
+  .sidebar,
+  .single aside,
+  .actionsTopArticle {
+    display: none !important;
+  }
+  
+  /*** article ***/
+  
+  /* give a max-width to the article */
+  div:has(.entry-content .navi_post .prev_post) {
+    max-width: 980px ;
+  }
+  
+  /* add a background behind the article */
+  body {
+    background: var(--background) !important
+  }
+  
+  /* style the article container */
+  body.single #wrap {
+    margin-top: 5rem !important;
+    margin-bottom: 5rem !important;
+    border-radius: 20px !important;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+  }
+  
+  /* give some margin and padding to the content */
+  body.single #main #main-content {
+      padding-top: 10rem !important;
+      padding-bottom: 10rem !important;
+  }
+  
+  /* remove unnecessary margins*/
+  body.single .entry-content {
+    margin: 0px !important;
+  }
+  
+  /* change font-family */
+  body.single #wrap {
+    font-family: 'Noto Sans', sans-serif !important;
+  }
+  
+  /* style the h1 */
+  body.single #wrap #main #main-content section#content article header.entry-header h1.entry-title {
+    font-family: 'Noto Serif', serif !important;
+    font-weight: 700 !important;
+    font-size: 5rem !important;
+    margin-top: 3rem !important;
+    margin-bottom: 1rem !important;
+    color: var(--text) !important;
+  }
+  
+  /* style the h2 subtitle */
+  body.single article .sottit h2 {
+    font-family: 'Noto Sans', sans-serif !important;
+    font-weight: 200 !important;
+    line-height: 3rem !important;
+    font-size: 2rem !important;
+    font-style: italic;
+    margin-bottom: 5rem !important;
+    color: var(--text) !important;
+  }
+  
+  /* style the body of the article */
+  body.single article #singleBody p {
+    font-weight: 400 !important;
+    line-height: 3.5rem !important;
+    font-size: 2.5rem !important;
+    color: var(--text) !important;
+  }
+  
+  body.single article #singleBody p a {
+    font-weight: 600 !important;
+    line-height: 3.5rem !important;
+    font-size: 2.5rem !important;
+  }
+  
+  /* limit the size of the images */
+  body.single #singleBody div.wp-caption {
+    max-height: 50vw !important;
+    overflow: hidden !important;
+    margin-bottom: 2rem !important;
+  } 
+  
+  body.single #singleBody div.wp-caption img {
+    margin-top: -25% !important;
+  }
+  
+  /* reduce the size of image caption */
+  body.single #singleBody .wp-caption p.wp-caption-text {
+    font-size: 1.5rem !important;
+    max-width: 100% !important;
+  }
+  
+  /* hides the icon next to image caption */
+  body.single #singleBody .wp-caption p.wp-caption-text::before {
+    display: none !important;
+  }
+  
+  /* give small rounded corners to all images */
+  #main img,
+  #main figure {
+    border-radius: 4px !important;
+  }
+  
+  /* give medium rounded corners to all images */
+  body.single .figure-container figure #photosize > img {
+    border-radius: 8px !important;
+  }
+  
+  /* give some space below the main image */
+  body.single .figure-container figure {
+    margin-bottom: 5rem !important;
+  }
+  
+  /* hides the camera icon next to the caption below images */
+  body.single div.figure-container.cf > figure i {
+    display: none !important;
+  }
+  
+  
+  /*** audio player ***/
+  
+  /* shrink and reduce opacity */
+  body.single #audioPlayerArticle {
+    opacity: 10% !important;
+    transition: all .5s ease-in-out;
+    height: 10px !important;
+  }
+  
+  /* resize and restore opacity on hover */
+  body.single #audioPlayerArticle:hover {
+    opacity: 100% !important;
+    height: 44px !important;
+  }
+  
+  /* style the comments button */
+  body.single button#showComments {
+    background-color: white !important;
+    border: 4px solid white !important;
+    transition: all 0.5s ease-in-out;
+  }
+  
+  /* show an underline on the comments button on hover */
+  body.single button#showComments:hover {
+    text-decoration: underline;
+  }
+  
+  /*** footer ***/
+  
+  /* reduce impact of similar articles */
+  body.single footer.entry-meta li{
+    -webkit-filter: grayscale(1);
+            filter: grayscale(1);
+    opacity: 50%;
+    transition: all 0.5s ease-in-out
+  }
+  
+  /* restore impact of similar articles on hover */
+  body.single footer.entry-meta li:hover {
+    -webkit-filter: grayscale(0);
+            filter: grayscale(0);
+    opacity: 100%;
+  }
+  
+  /*** header ***/
+  
+  /* hide the header on scroll */
+  body.single header.site-head {
+    position: static !important;
+  }
+  
+  /*** responsiveness ***/
+  
+  @media only screen and (max-width: 650px) {
+    /* font-size adjustments */
+      body.single article #singleBody p {
+        font-size: 2rem !important;
+        line-height: 3.2rem !important;
+      }
+  }
